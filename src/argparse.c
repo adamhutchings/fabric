@@ -49,6 +49,11 @@ fc_args_t fc_parse_all(int argc, char** argv) {
 
     fc_args_t ret;
 
+    ret.empty = true;
+    ret.vinfo = false;
+    ret.args  = false;
+    ret.file  = NULL;
+
     for (int i = 0; i < argc; i++) {
 
         int st = fc_parse_one(&ret, argv[i]);
