@@ -4,6 +4,8 @@
  * bytecodes is reached.
  */
 
+#include <argparse.h>  /* fc_parse_all */
+
 /**
  * Main function for Fabric.
  * @param argc the argument count
@@ -12,5 +14,7 @@
  * @author Adam Hutchings
  */
 int main(int argc, char** argv) {
+
+	fc_args_t pargs = fc_parse_all(argc, argv);
 
 }
