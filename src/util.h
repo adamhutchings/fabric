@@ -45,17 +45,17 @@ typedef enum {
 /**
  * Make sure that something is true. If not, exit with an error.
  */
-#define FC_ASSERT(cond)                          \
-    do {                                         \
-        if (!(cond)) {                           \
-            FC_ERROR(                            \
-                "assertion failed:"              \
-                "File \"%s\", function \"%s\", " \
-                "line %d:\n\t%s",                \
-                __FILE__, __FUNC__, __LINE__,    \
-                #cond                            \
-            );                                   \
-        }                                        \
+#define FC_ASSERT(cond)                               \
+    do {                                              \
+        if (!(cond)) {                                \
+            FC_ERROR(                                 \
+                "assertion failed: "                  \
+                "File \"%s\", "                       \
+                "line %d:\n\t%s",                     \
+                __FILE__, __LINE__,                   \
+                #cond                                 \
+            );                                        \
+        }                                             \
     } while (0)
 
 #endif /* FC_UTIL_H */
