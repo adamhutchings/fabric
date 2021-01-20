@@ -18,7 +18,7 @@ void _fc_help(fc_args_t args) {
 
 	if (args.empty) {
 		fprintf(stderr, "fabric: expected arguments (try --help)\n");
-		exit(FC_FAILED);
+		exit(-FC_FAILED);
 	}
 
 	if (args.vinfo) {
